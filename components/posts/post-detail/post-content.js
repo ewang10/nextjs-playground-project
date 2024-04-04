@@ -2,16 +2,8 @@ import ReactMarkdown from 'react-markdown';
 import PostHeader from './post-header';
 import classes from './post-content.module.css';
 
-const DUMMY_POST = {
-    slug: 'getting-started-with-nextjs',
-    title: 'Getting Started with NextJS',
-    image: 'getting-started-nextjs.png',
-    date: '2022-02-10',
-    content: '# This is a first post'
-};
-
-function PostContent() {
-    const { slug, image, title, content } = DUMMY_POST;
+function PostContent({ post }) {
+    const { slug, image, title, content } = post;
     const imagePath = `/images/posts/${slug}/${image}`;
 
     return (
